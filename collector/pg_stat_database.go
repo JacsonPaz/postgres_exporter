@@ -209,7 +209,7 @@ func (PGStatDatabaseCollector) Update(ctx context.Context, instance *instance, c
 	rows, err := db.QueryContext(ctx,
 		`SELECT
 			datid
-			,COALESCE(datname, 'vazio') AS datname,
+			,COALESCE(datname, 'vazio') AS datname
 			,numbackends
 			,xact_commit
 			,xact_rollback
